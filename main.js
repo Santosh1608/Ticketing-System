@@ -17,7 +17,7 @@ class TicketingCounter {
     }
   }
 
-  static calculatePrice(listOfGuests = []) {
+  static calculateTotalPrice(listOfGuests = []) {
     let totalPrice = 0;
     listOfGuests.forEach((guest) => {
       totalPrice += this.calculatePriceForSingleGuest(guest);
@@ -45,7 +45,7 @@ function start() {
       listOfGuests.push(new Guest(guestName, guestAge));
     }
 
-    const totalPrice = TicketingCounter.calculatePrice(listOfGuests);
+    const totalPrice = TicketingCounter.calculateTotalPrice(listOfGuests);
     console.log(`Your total price is: ${totalPrice}`);
     TicketingCounter.printTicket(listOfGuests);
   }
