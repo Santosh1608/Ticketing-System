@@ -12,7 +12,7 @@ class TicketingCounter {
     if (age >= 18 && age < 60) {
       return 500;
     }
-    if (age > 60) {
+    if (age >= 60) {
       return 300;
     }
   }
